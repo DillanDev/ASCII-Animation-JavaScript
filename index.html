@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dilan</title>
+</head>
+
+<body>
+
+    <script>
+        var b, d, e, i, j = 0;
+	
+        function signature() {
+
+            b = document.getElementById("o");
+            b.style.display = "block";
+	
+
+            if (!d) {
+                d = document.getElementById("i");
+                e = d.innerHTML
+            }
+	   //array debe contener todos los caracteres en caso de llevar una barra invertida \\ poner doble
+            array = [
+                " ______", "   ___ ", "  ___     ", " _______ ", " __    _ ", " _______ ", " _______ ", " ______  ",
+                "\n|      |", " |   |", " |   |    ", "|   _   |", "|  |  | |", "|       |", "|       |", "|      | ",
+                "\n|  _    |", "|   |", " |   |    ", "|  |_|  |", "|   |_| |", "|    ___|", "|   _   |", "|  _    |",
+                "\n| | |   |", "|   |", " |   |    ", "|       |", "|       |", "|   | __ ", "|  | |  |", "| | |   |",
+                "\n| |_|   |", "|   |", " |   |___ ", "|       |", "|  _    |", "|   ||  |", "|  |_|  |", "| |_|   |",
+                "\n|       |", "|   |", " |       |", "|   _   |", "| | |   |", "|   |_| |", "|       |", "|       |",
+                "\n|______|", " |___|", " |_______|", "|__| |__|", "|_|  |__|", "|_______|", "|_______|", "|______| "
+            ];
+
+
+            container = "";
+            i || (i = setInterval(
+
+                function() {
+
+                    //Escribe en pantalla
+                    container += array[j];
+                    b.innerHTML = container + '<span style="background: #000">&nbsp;</span>';
+                    j++;
+
+                    //Final
+                    if (j >= array.length) {
+
+                        clearInterval(i);
+
+                    } 
+		//Controlas el tiempo de ejecución en milisegundos
+                }, 50))
+
+
+
+        }
+    </script>
+	
+	
+    <pre style="font-size:small;  margin-bottom:0.88em; width: 500px;  background-color: #FAFAFA; display: none;" id="o"></pre>
+	
+	<!--Activa el scrip, el codigo que esta dentro de él no es necesario-->
+    <pre style="font-size: 10px;  margin-bottom:0.88em; width: 400px; background-color: #FAFAFA; color: #33e; cursor: pointer;" id="i" onclick="signature();">
+
+        _=0;
+	k;
+	main(){
+		while(_&lt;56){
+		document.write(array = ["_", "","|", "","\", "","" "]);
+		}
+	}
+	
+    </pre>
+
+
+</body>
+
+</html>
